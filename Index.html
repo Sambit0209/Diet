@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7-Month Height & Weight Gain Checklist</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      padding: 20px;
+      max-width: 700px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    .section {
+      background: #ffffff;
+      margin: 20px 0;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .section h2 {
+      color: #34495e;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Daily Checklist</h1>
+
+  <div class="section">
+    <h2>Morning (7:15 – 8:15 AM)</h2>
+    <label><input type="checkbox"> Lukewarm water + soaked almonds + walnuts</label>
+    <label><input type="checkbox"> Cobra Pose – 3 sets</label>
+    <label><input type="checkbox"> Cat-Cow Pose – 2 mins</label>
+    <label><input type="checkbox"> Forward bend – 2 mins</label>
+    <label><input type="checkbox"> High jumps – 30 reps</label>
+    <label><input type="checkbox"> Breakfast (eggs or paneer + banana shake)</label>
+  </div>
+
+  <div class="section">
+    <h2>Lunch (2:00 – 2:30 PM at Office)</h2>
+    <label><input type="checkbox"> 2 Chapatis + Dal/Rajma + Sabzi</label>
+    <label><input type="checkbox"> Curd/Buttermilk + Salad</label>
+  </div>
+
+  <div class="section">
+    <h2>Evening Snack (5:30 – 6:00 PM)</h2>
+    <label><input type="checkbox"> Peanuts/Makhana + Banana/Egg</label>
+    <label><input type="checkbox"> Milk/Protein shake</label>
+  </div>
+
+  <div class="section">
+    <h2>Dinner (9:30 PM)</h2>
+    <label><input type="checkbox"> Rotis/Rice + Paneer/Tofu/Chicken</label>
+    <label><input type="checkbox"> Sabzi + Salad</label>
+  </div>
+
+  <div class="section">
+    <h2>Before Bed (12:00 AM)</h2>
+    <label><input type="checkbox"> Warm milk + Ashwagandha</label>
+    <label><input type="checkbox"> Optional: Date or figs</label>
+  </div>
+
+  <div class="section">
+    <h2>Height Routine (9:00 PM Park)</h2>
+    <label><input type="checkbox"> Bar Hanging – 6 sets</label>
+    <label><input type="checkbox"> Skipping – 3 mins</label>
+    <label><input type="checkbox"> Cobra stretch – 1 min</label>
+    <label><input type="checkbox"> Wall stretch – 1 min</label>
+  </div>
+
+  <div class="section">
+    <h2>Strength Workout (3 Days/Week)</h2>
+    <label><input type="checkbox"> Push-ups – 3 sets</label>
+    <label><input type="checkbox"> Squats – 3 sets</label>
+    <label><input type="checkbox"> Curls – 3 sets</label>
+    <label><input type="checkbox"> Plank – 2 sets</label>
+  </div>
+
+  <script>
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach((checkbox, index) => {
+      checkbox.checked = localStorage.getItem('checkbox' + index) === 'true';
+      checkbox.addEventListener('change', () => {
+        localStorage.setItem('checkbox' + index, checkbox.checked);
+      });
+    });
+  </script>
+</body>
+</html>
+</html>
